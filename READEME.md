@@ -8,8 +8,7 @@
 
 ## Using Vagrant
 
-`$ vagrant init puppetlabs/ubuntu-14.04-64-nocm; vagrant up --provider virtualbox`<br>
-
+`$ vagrant init puppetlabs/ubuntu-14.04-64-nocm; vagrant up --provider virtualbox`
 
 
 **Vagrant Box**
@@ -20,7 +19,7 @@ puppetlabs/ubuntu-14.04-64-nocm (virtualbox, 1.0.3)
 ubuntu/trusty32                 (virtualbox, 20160518.0.0)
 ```
 
-** VagrantFile
+**VagrantFile**
 
 ```
 config.vm.define "ansible" do |ansible|
