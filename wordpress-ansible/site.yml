@@ -1,4 +1,4 @@
-- hosts: wordpress
+- hosts: wordpress-server
   user: vagrant
   sudo: true
 
