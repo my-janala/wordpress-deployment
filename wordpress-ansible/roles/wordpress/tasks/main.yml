@@ -5,7 +5,8 @@
     dest=/tmp/wordpress.tar.gz
     validate_certs=no
 
-- name: Extract WordPress  unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
+- name: Extract WordPress
+  unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
   sudo: yes
 
 - name: Update default Apache site
