@@ -13,24 +13,15 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   # multi-web server config
-  config.vm.define "default" do |default|
-    default.vm.box = "puppetlabs/ubuntu-14.04-64-nocm"
-    default.vm.network :forwarded_port, guest: 80, host: 4567, auto_correct: true
-    default.vm.network "private_network", ip: "192.168.0.1", auto_config: true
+  config.vm.define "ansible" do |ansible|
+    ansible.vm.box = "puppetlabs/ubuntu-14.04-64-nocm"
+    ansible.vm.network "private_network", ip: "192.168.0.1", auto_config: true
   end
 
   config.vm.define "web1" do |web1|
     web1.vm.box = "puppetlabs/ubuntu-14.04-64-nocm"
-    web1.vm.network :forwarded_port, guest: 80, host: 4568, auto_correct: true
-    web1.vm.network :forwarded_port, guest: 8080, host: 4001, auto_correct: true
+    web1.vm.network :forwarded_port, guest: 8080, host: 4567, auto_correct: true
     web1.vm.network "private_network", ip: "192.168.0.2", auto_config: true
-  end
-
-  config.vm.define "web2" do |web2|
-    web2.vm.box = "puppetlabs/ubuntu-14.04-64-nocm"
-    web2.vm.network :forwarded_port, guest: 80, host: 4569, auto_correct: true
-    web2.vm.network :forwarded_port, guest: 8080, host: 4002, auto_correct: true
-    web2.vm.network "private_network", ip: "192.168.0.3", auto_config: true
   end
 
   # Disable automatic box update checking. If you disable this, then
