@@ -1,0 +1,21 @@
+
+# Clear Score Devops Challenge
+
+This is a challenge where you can showcase your technical skills and the considerations which you make when performing devops and infrastructure tasks. Your solution may be as simple or complex as you like, provided it meets the requirements below, and will serve as a discussion point when you come in to meet us. You should not need to spend more than an hour or two on the challenge.
+
+### The Brief
+You have been asked to create a web site which can be used for publishing blogs. As a proof of concept, it will be sufficient that you demonstrate a website that displays text (e.g. *Lorem Ipsum* <https://en.wikipedia.org/wiki/Lorem_ipsum> and an image on a single home page.
+
+You can create your own application but can also use an open source or community software, such as Wordpress <https://wordpress.org> or Keystone <http://keystonejs.com> (or even use static content). **This proof of concept is to demostrate the technical feasibility of hosting and managing the platform and is not about content**.
+
+You must meet the following requirements:
+
+- Deliver the tooling to set up an application which displays a web page with *Lorem Ipsum* text and an image
+- Provide source code for creating the stack in a publically available repository, e.g. Github <https://github.com>
+- Provide a proxy for accessing the web/application server so the application can be scaled later
+- Provide basic setup documentation to run the application
+- Be prepared to explain your choices
+
+How you host this application is entirely up to you. You can provide tooling to run it locally or link to an instance running in the cloud.
+
+Good luck, have fun and we look forward to hearing from you!
