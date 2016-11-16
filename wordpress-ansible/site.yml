@@ -1,0 +1,9 @@
+- hosts: wordpress
+  user: vagrant
+  sudo: true
+
+  roles:
+    - server
+    - php
+    - mysql
+    - wordpress
