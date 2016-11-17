@@ -92,7 +92,7 @@ site.yml file
     - wordpress
 ```
 
-Deploying packages to target host **wordpress-server**. 
+Deploying packages to target host **wordpress-server**.
 
 `$ ansible-playbook -i hosts site.yml --check -v`
 
@@ -105,8 +105,10 @@ See the screenshot is here ![alt tag] https://github.com/my-janala/wordpress-dep
 
 * site_title: my amazing blog
 * username: admin
-* password: 4aXQ2t#qpsDXA9xNvl
-* email: mezbaur.rahman@gmail.com
+* password:
+* email:
+
+note: secret information are encrypted by ansible-vault. 
 
 ## Install Wordpress
 
