@@ -68,6 +68,21 @@ $ ansible --version
 ansible 1.5.4
 ```
 
+
+## Blog Page
+
+See the screenshot is here 
+
+## Blog information
+
+* site_title: my amazing blog
+* username: admin
+* password: 4aXQ2t#qpsDXA9xNvl
+* email: mezbaur.rahman@gmail.com
+
+
+
+
 ## Install Wordpress
 
 
