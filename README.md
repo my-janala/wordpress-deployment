@@ -110,7 +110,11 @@ See the screenshot is here ![alt tag] https://github.com/my-janala/wordpress-dep
 
 note: secret information are encrypted by ansible-vault.
 
-## Install Wordpress
+
+## Proxy Setup/ AWS ELB
+
+I might as well pull this repo https://github.com/crushlovely/ansible-elb, create a playbook which will create the necessary ELB.
+
 
 
 ## References
