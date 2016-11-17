@@ -45,7 +45,7 @@ end
 
 **Boot Vagrant environment**
 
-$ vagrant up
+`$ vagrant up`
 
 ## Install and Configure Ansible
 
@@ -108,7 +108,7 @@ See the screenshot is here ![alt tag] https://github.com/my-janala/wordpress-dep
 * password:
 * email:
 
-note: secret information are encrypted by ansible-vault. 
+note: secret information are encrypted by ansible-vault.
 
 ## Install Wordpress
 
