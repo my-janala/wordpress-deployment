@@ -1,18 +1,24 @@
 # wordpress-deployment
-deploy a publishing blog built on wordpress using ansible 
+deploy a publishing blog built on wordpress using ansible
 
 ## Plan
 
 * Use vagrant to create VMs (OS: Ubuntu 14.04)
 * Ansible will be used configuration management and deployment
 * Single Ansible server and one/two wordpress servers
-*
+* serving wordpress behind apache2
+* Supposing the server is built on AWS platform, ELB will be used for proxy.
 
 
 ## Using Vagrant
 
 `$ vagrant init puppetlabs/ubuntu-14.04-64-nocm; vagrant up --provider virtualbox`
 
+```
+$ sudo netstat -ntlp  | grep ':80\|:3306'
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      960/mysqld
+tcp6       0      0 :::80                   :::*                    LISTEN      1091/apache2
+```
 
 **Vagrant Box**
 
@@ -36,7 +42,6 @@ config.vm.define "web1" do |web1|
   web1.vm.network "private_network", ip: "192.168.0.2", auto_config: true
 end
 ```
-
 
 **Boot Vagrant environment**
 
@@ -71,10 +76,30 @@ $ ansible --version
 ansible 1.5.4
 ```
 
+## Deploying Wordpress and necessary packages
+
+site.yml file
+
+```
+- hosts: wordpress-server
+  user: vagrant
+  sudo: true
+
+  roles:
+    - server
+    - php
+    - mysql
+    - wordpress
+```
+
+Deploying packages to target host **wordpress-server**. 
+
+`$ ansible-playbook -i hosts site.yml --check -v`
+
 
 ## Blog Page
 
-See the screenshot is here 
+See the screenshot is here ![alt tag] https://github.com/my-janala/wordpress-deployment/blob/development/Screen%20Shot%202016-11-17%20at%2022.52.59.png
 
 ## Blog information
 
@@ -91,4 +116,3 @@ See the screenshot is here
 * https://www.digitalocean.com/community/tutorials/how-to-automate-installing-wordpress-on-ubuntu-14-04-using-ansible
 * http://jamesdacosta.com/first-steps-with-vagrant-ansible-and-aws/
 * http://software.danielwatrous.com/using-vagrant-to-explore-ansible/
-
