@@ -118,9 +118,3 @@ note: secret information are encrypted by ansible-vault.
 I can either as well pull this repo https://github.com/crushlovely/ansible-elb, create a playbook which will create the necessary ELB.
 
 Even a simple `provision_elb.yml` can be used to create AWS ELB.
-
-## References
-* https://github.com/ansible/ansible-examples/tree/master/wordpress-nginx
-* https://www.digitalocean.com/community/tutorials/how-to-automate-installing-wordpress-on-ubuntu-14-04-using-ansible
-* http://jamesdacosta.com/first-steps-with-vagrant-ansible-and-aws/
-* http://software.danielwatrous.com/using-vagrant-to-explore-ansible/
