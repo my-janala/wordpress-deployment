@@ -99,6 +99,8 @@ Deploying packages to target host **wordpress-server**.
 
 ## Blog Page
 
+I have created a blog post called **my amazing blog** with the text *Lorem Ipsum* being shown and also an image.
+
 See the screenshot is here ![alt tag] https://github.com/my-janala/wordpress-deployment/blob/development/Screen%20Shot%202016-11-17%20at%2022.52.59.png
 
 ## Blog information
