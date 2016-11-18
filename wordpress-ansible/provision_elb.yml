@@ -1,0 +1,18 @@
+- local_action:
+    module: ec2_elb_lb
+    name: "wordpress_elb"
+    state: present
+    zones:
+      - eu-west-1a
+      - eu-west-1d
+    listeners:
+      - protocol: http # options are http, https, ssl, tcp
+        load_balancer_port: 80
+        instance_port: 80
+        proxy_protocol: True
+      - protocol: http
+        load_balancer_port: 80
+        instance_protocol: http # optional, defaults to value of protocol setting
+        instance_port: 80
+        # ssl certificate required for https or ssl
+        ssl_certificate_id: "arn:aws:iam::123456789012:server-certificate/company/servercerts/ProdServerCert"
