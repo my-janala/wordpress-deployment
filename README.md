@@ -45,7 +45,7 @@ end
 
 **Boot Vagrant environment**
 
-$ vagrant up
+`$ vagrant up`
 
 ## Install and Configure Ansible
 
@@ -99,6 +99,8 @@ Deploying packages to target host **wordpress-server**.
 
 ## Blog Page
 
+I have created a blog post called **my amazing blog** with the text *Lorem Ipsum* being shown and also an image.
+
 See the screenshot is here ![alt tag] https://github.com/my-janala/wordpress-deployment/blob/development/Screen%20Shot%202016-11-17%20at%2022.52.59.png
 
 ## Blog information
@@ -108,10 +110,14 @@ See the screenshot is here ![alt tag] https://github.com/my-janala/wordpress-dep
 * password:
 * email:
 
-note: secret information are encrypted by ansible-vault. 
+note: secret information are encrypted by ansible-vault.
 
-## Install Wordpress
 
+## Proxy Setup/ AWS ELB
+
+I can either as well pull this repo https://github.com/crushlovely/ansible-elb, create a playbook which will create the necessary ELB.
+
+Even a simple `provision_elb.yml` can be used to create AWS ELB.
 
 ## References
 * https://github.com/ansible/ansible-examples/tree/master/wordpress-nginx
