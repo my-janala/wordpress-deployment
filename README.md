@@ -113,9 +113,9 @@ note: secret information are encrypted by ansible-vault.
 
 ## Proxy Setup/ AWS ELB
 
-I might as well pull this repo https://github.com/crushlovely/ansible-elb, create a playbook which will create the necessary ELB.
+I can either as well pull this repo https://github.com/crushlovely/ansible-elb, create a playbook which will create the necessary ELB.
 
-
+Even a simple `provision_elb.yml` can be used to create AWS ELB.
 
 ## References
 * https://github.com/ansible/ansible-examples/tree/master/wordpress-nginx
