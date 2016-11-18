@@ -94,7 +94,7 @@ site.yml file
 
 Deploying packages to target host **wordpress-server**.
 
-`$ ansible-playbook -i hosts site.yml --check -v`
+`$ ansible-playbook -i hosts site.yml -v`
 
 
 ## Blog Page
